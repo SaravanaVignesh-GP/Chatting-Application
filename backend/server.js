@@ -5,6 +5,7 @@ try {
   dotenv = require("dotenv");
 } catch (error) {
   console.error("dotenv module not found. Please install it using 'npm install dotenv'");
+  console.error("Require stack:", error.stack); // Debug log for require stack
   process.exit(1);
 }
 const userRoutes = require("./routes/userRoutes");
